@@ -4,8 +4,7 @@ RUN npm install -g firebase-tools
 # Install python/pip
 ENV PYTHONUNBUFFERED=1
 RUN apk add --update --no-cache python3 py3-pip
-RUN python3 -m venv venv
-RUN source venv/bin/activate && pip install firebase-functions
+RUN python3 -m pip install firebase-functions --break-system-packages
 
 
 COPY entrypoint.sh /usr/local/bin
