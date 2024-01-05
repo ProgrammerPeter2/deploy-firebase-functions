@@ -9,4 +9,5 @@ RUN source venv/bin/activate && pip install firebase-functions
 
 
 COPY entrypoint.sh /usr/local/bin
-ENTRYPOINT ["entrypoint.sh"]
+RUN chmod +x /usr/local/bin/entrypoint.sh
+ENTRYPOINT ["./usr/local/bin/entrypoint.sh"]
