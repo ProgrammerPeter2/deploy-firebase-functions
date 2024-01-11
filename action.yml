@@ -1,16 +1,14 @@
 name: 'Deploy Firebase (not just) Cloud Functions'
 author: 'ProgrammerPeter2'
 description: 'A GitHub Action to deploy to Firebase Cloud Functions'
-inputs:
-  targets:
-    description: "The list of Firebase targets (hosting, functions) what you'd like to deploy"
-    required: true
-    default: "hosting,functions"
+#inputs:
+#  targets:
+#    description: "The list of Firebase targets (hosting, functions) what you'd like to deploy"
+#    required: true
+#    default: "hosting,functions"
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.targets }}
 branding:
   icon: 'cloud'
   color: 'black'
