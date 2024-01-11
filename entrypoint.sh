@@ -1,6 +1,6 @@
 #!/bin/sh
 
-cd /github/workflow
+cd /github/workspace
 
 if [ -z "${FIREBASE_TOKEN}" ]; then
     echo "FIREBASE_TOKEN is missing"
